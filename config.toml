@@ -5,7 +5,7 @@
 #
 #=========================================================================================
 
-base_url = "https://mutex00.github.io/"
+base_url = "https://mutex00.github.io/starlight/"
 title = "Starlight Stories"
 description = "An archive of AI-generated stories powered by the Serene theme for Zola."
 default_language = "en"
