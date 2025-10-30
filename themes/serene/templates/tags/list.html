@@ -18,9 +18,9 @@
   {{ macros::back_link(path = get_url(path="/")) }}
   <main>
     <h1 class="title">Tags</h1>
-    <div class="tags">
+    <div class="tags tag-list">
       {% for tag in terms -%}
-      <a class="instant" href="{{ tag.permalink }}"># {{ tag.name | lower }}</a>
+      <a class="tag-pill instant" href="{{ tag.permalink }}">{{ tag.name }}</a>
       {% endfor %}
     </div>
   </main>
