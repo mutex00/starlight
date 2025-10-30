@@ -957,8 +957,8 @@ body.prose-page {
   .post {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    gap: 2em;
+    align-items: center;
+    gap: 1.5em;
     padding: 0.25em 0px;
     /* margin: 0.25em 0; */
     text-decoration: none;
@@ -969,6 +969,44 @@ body.prose-page {
       &:hover {
         border-bottom-color: var(--primary-color);
       }
+    }
+
+    .post-heading {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5em;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em;
+    }
+
+    .tag-pill {
+      --tag-bg: hsl(210 40% 92%);
+      --tag-border: hsl(210 30% 82%);
+      --tag-fg: hsl(210 30% 32%);
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15em 0.65em;
+      border-radius: 999px;
+      font-size: 0.7em;
+      line-height: 1.4;
+      background-color: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--tag-fg);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .date {
@@ -996,6 +1034,15 @@ body.prose-page {
       align-items: start;
       gap: 0.25em;
       margin: 1em 0;
+      .post-heading {
+        gap: 0.4em;
+      }
+      .tag-list {
+        gap: 0.3em;
+      }
+      .tag-pill {
+        font-size: 0.75em;
+      }
       .date {
         margin-left: initial;
         color: var(--text-pale-color);

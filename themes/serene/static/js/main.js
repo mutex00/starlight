@@ -243,6 +243,38 @@ function enableReaction() {
   init();
 }
 
+function applyTagColors() {
+  const tagPills = document.querySelectorAll('.tag-pill');
+  if (tagPills.length === 0) return;
+  const cache = new Map();
+
+  const hashLabel = (label) => {
+    let hash = 0;
+    for (let i = 0; i < label.length; i += 1) {
+      hash = (hash << 5) - hash + label.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  };
+
+  tagPills.forEach((pill) => {
+    const label = pill.textContent.trim();
+    if (!label) return;
+    if (!cache.has(label)) {
+      const hash = hashLabel(label);
+      const hue = hash % 360;
+      const background = `hsl(${hue} 70% 88%)`;
+      const border = `hsl(${hue} 60% 78%)`;
+      const text = `hsl(${hue} 35% 32%)`;
+      cache.set(label, { background, border, text });
+    }
+    const { background, border, text } = cache.get(label);
+    pill.style.setProperty('--tag-bg', background);
+    pill.style.setProperty('--tag-border', border);
+    pill.style.setProperty('--tag-fg', text);
+  });
+}
+
 function enableBackLink() {
   const backLink = document.querySelector('#back-link');
   if (!backLink) return;
@@ -258,6 +290,7 @@ enableThemeToggle();
 enablePrerender();
 enableRssMask();
 enableBackLink();
+applyTagColors();
 if (document.body.classList.contains('post')) {
   enableOutdateAlert();
   addBackToTopBtn();
