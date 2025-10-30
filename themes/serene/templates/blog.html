@@ -27,8 +27,12 @@
     <h2 class="category">{{ category_name }}</h2>
     <div class="post-list categorized">
       {% for post in posts %}
-      {% set taxonomies = post.taxonomies | default(value={}) %}
-      {% set post_tags = taxonomies.tags | default(value=[]) %}
+      {% set post_tags = [] %}
+      {% if post.taxonomies is defined %}
+        {% if post.taxonomies.tags is defined %}
+          {% set post_tags = post.taxonomies.tags %}
+        {% endif %}
+      {% endif %}
       <a class="post instant {% if post.extra.featured %}featured{% endif %}" href="{{ post.permalink }}">
         <div class="post-heading">
           <span class="post-title">{{ post.title }}</span>
@@ -48,8 +52,12 @@
     {% else %}
     <div class="post-list">
       {% for post in section.pages %}
-      {% set taxonomies = post.taxonomies | default(value={}) %}
-      {% set post_tags = taxonomies.tags | default(value=[]) %}
+      {% set post_tags = [] %}
+      {% if post.taxonomies is defined %}
+        {% if post.taxonomies.tags is defined %}
+          {% set post_tags = post.taxonomies.tags %}
+        {% endif %}
+      {% endif %}
       <a class="post instant {% if post.extra.featured %}featured{% endif %}" href="{{ post.permalink }}">
         <div class="post-heading">
           <span class="post-title">{{ post.title }}</span>
