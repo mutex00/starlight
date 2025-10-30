@@ -89,8 +89,19 @@
     <section class="layout-list">
       <div class="post-list">
         {% for post in blog_section.pages | slice(end=section.extra.recent_max) %}
+        {% set taxonomies = post.taxonomies | default(value={}) %}
+        {% set post_tags = taxonomies.tags | default(value=[]) %}
         <a class="post instant {% if post.extra.featured %}featured{% endif %}" href="{{ post.permalink }}">
-          <span>{{ post.title }}</span>
+          <div class="post-heading">
+            <span class="post-title">{{ post.title }}</span>
+            {% if post_tags | length > 0 %}
+            <span class="tag-list">
+              {% for tag in post_tags %}
+              <span class="tag-pill" data-tag="{{ tag | slugify }}">{{ tag }}</span>
+              {% endfor %}
+            </span>
+            {% endif %}
+          </div>
           <span class="date">{{ post.date | date(format=section.extra.date_format) }}</span>
         </a>
         {% endfor %}
