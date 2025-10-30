@@ -22,8 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Deploy to GitHub Pages
-        uses: shalzz/zola-deploy-action@v0.18.1
+        uses: shalzz/zola-deploy-action@v0.21.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PAGES_BRANCH: gh-pages
-          BASE_URL: https://stories.example.com
