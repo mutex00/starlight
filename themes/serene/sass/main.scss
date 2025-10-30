@@ -939,6 +939,40 @@ body.prose-page {
 /* layout post list ( home / blog / tag )
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  align-items: center;
+}
+
+.tag-pill {
+  --tag-bg: hsl(210 40% 92%);
+  --tag-border: hsl(210 30% 82%);
+  --tag-fg: hsl(210 30% 32%);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15em 0.65em;
+  border-radius: 999px;
+  font-size: 0.7em;
+  line-height: 1.4;
+  background-color: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--tag-fg);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--tag-border);
+      border-color: var(--tag-fg);
+    }
+  }
+}
+
 .layout-list {
   .category {
     font-size: 0.9em;
@@ -982,31 +1016,6 @@ body.prose-page {
 
     .post-title {
       font-weight: 500;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4em;
-    }
-
-    .tag-pill {
-      --tag-bg: hsl(210 40% 92%);
-      --tag-border: hsl(210 30% 82%);
-      --tag-fg: hsl(210 30% 32%);
-      display: inline-flex;
-      align-items: center;
-      padding: 0.15em 0.65em;
-      border-radius: 999px;
-      font-size: 0.7em;
-      line-height: 1.4;
-      background-color: var(--tag-bg);
-      border: 1px solid var(--tag-border);
-      color: var(--tag-fg);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .date {
@@ -1425,24 +1434,10 @@ body.post {
 
     #tags {
       margin-bottom: 1em;
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
+      gap: 0.5em;
 
-      a {
-        color: var(--primary-color);
-        text-decoration: none;
-        line-height: 1.25;
-        span {
-          font-size: 0.95em;
-          margin-right: 2px;
-        }
-
-        border-bottom: 1.5px solid transparent;
-        &:hover {
-          opacity: 1;
-          border-bottom-color: var(--primary-color);
-        }
+      .tag-pill {
+        font-size: 0.75em;
       }
     }
 
@@ -1578,20 +1573,10 @@ body.tag-list {
 
   .tags {
     margin: 2em 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1em 2em;
+    gap: 0.6em 1em;
 
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      line-height: 1.25;
-
-      border-bottom: 1.5px solid transparent;
-      &:hover {
-        border-bottom-color: var(--primary-color);
-      }
+    .tag-pill {
+      font-size: 0.8em;
     }
   }
 
