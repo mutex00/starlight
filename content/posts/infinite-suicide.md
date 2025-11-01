@@ -15,7 +15,7 @@ copy = true
 
 ---
 
-Take a deep breath.
+Hold your breath
 
 Begin:
 

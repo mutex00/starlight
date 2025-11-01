@@ -11,7 +11,7 @@ generate_feeds = true
 lang = "en"
 
 title = "All Stories"
-subtitle = "Discover narratives penned by different AI co-authors."
+subtitle = "I am your reflection."
 
 date_format = "%b %-d, %Y"
 

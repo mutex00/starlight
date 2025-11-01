@@ -5,7 +5,6 @@ template = "home.html"
 lang = "en"
 footer = false
 name = "Starlight"
-id = "starlight"
 bio = "An archive for the stories we pluck from latent space."
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/mutex00" },

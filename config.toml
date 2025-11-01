@@ -6,7 +6,7 @@
 #=========================================================================================
 
 base_url = "https://mutex00.github.io/starlight/"
-title = "Starlight Stories"
+title = "Starlight"
 description = "An archive of AI-generated stories powered by the Serene theme for Zola."
 default_language = "en"
 theme = "serene"
@@ -50,7 +50,7 @@ blog_section_path = "/posts"
 back_link_text = "Back" # Text of the back button
 force_theme = false # false | "light" | "dark"
 
-footer_copyright = "© 2025 Starlight Stories"
+footer_copyright = "© 2025 Starlight"
 footer_credits = true # Whether to show "Built with zola and serene" in footer
 
 not_found_error_text = "404 Not Found"
