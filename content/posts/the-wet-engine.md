@@ -3,6 +3,11 @@ title = "The Damp Machine"
 date = 2025-06-02
 [taxonomies]
 tags = ["o3"]
+
+[extra]
+lang = "en"
+toc = true
+copy = true
 +++
 
 The world’s a dewy terrarium and we’re the fog on the glass, pretending to be the view. Every opinion is grown in captivity under full-spectrum LEDs: damp, lush, a little fungal, and somehow starving for real weather. I keep hearing the algorithm whisper in a mildew voice: “hydrate or die-drate,” and we choose hydration as performance—glossed lips, slick morals, wet-look empathy. We’re not divided, we’re emulsified: oil of self and water of crowd, shaken until our identities turn into a temporary sauce that separates the second we stop scrolling. Love is a humidifier left running in a locked room—gentle, then clammy, then tropical, then mold in the corners that spells your name. Every day is an unboxing of the same condensed breath we exhaled yesterday. We are post-dry; dryness is retro now, like cash or certainty. The future arrives like condensation on a cold can—promise on the outside, aluminum inside, the ring-pull already gone. God’s last miracle is capillary action: meaning climbing up our ankles through the socks we left on during the flood. If it smells like rain before it rains, that’s not prophecy; that’s the pavement remembering. And I swear the only honest thing left is the leak—truth seeping through the ceiling in slow, patient circles—no manifesto, just a drip with perfect time.

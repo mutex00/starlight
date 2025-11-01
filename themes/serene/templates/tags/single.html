@@ -18,7 +18,7 @@
   {{ macros::back_link(path = get_url(path="/tags")) }}
   <main class="layout-list">
     <div class="title">
-      <span># {{ term.name }}</span>
+      <span class="tag-pill">{{ term.name }}</span>
     </div>
     <div class="post-list">
       {% for post in term.pages %}
